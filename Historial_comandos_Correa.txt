@@ -1,0 +1,42 @@
+history
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+rm -rf repogit
+mkdir repogit
+cd repogit
+git clone git@github.com:leocorrea19/TP1_AySO.git
+cd TP1_AySO/
+pwd
+ls -l
+cat /etc/os-release
+man grep
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+grep -i home_url /etc/os-release
+grep -i HOME_URL /etc/os-release
+whoami
+echo "Usuario=$(whoami)" > datos_usuario.txt
+ls
+git add .
+git config --global user.email "leoneljaviercorrea.19@gmail.com"
+git config --global user.name "leocorrea19"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+git push
+cat /proc/cpuinfo
+grep "AMD Ryzen 5 4600G with Radeon Graphics" /proc/cpuinfo | head -n1 >> datos_usuario.txt
+git add .
+git status
+git commit -m "FEAT: Añadiendo informacion de CPU"
+cat <<EOF>> README.md
+Alumno: Correa Leonel Javier
+Division: 313
+Turno: Noche
+EOF
+
+git status
+git add .
+git commit -m "ADD: añadiendo readme.md y datos usuarios"
+git push
+history
+history -a
